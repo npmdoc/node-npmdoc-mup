@@ -1,0 +1,762 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/kadirahq/meteor-up#readme"
+
+    >mup (v1.2.6)</a>
+</h1>
+<h4>Production Quality Meteor Deployments</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup">module mup</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>commands</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>custom_errors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>meteor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>mongo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>mup_api</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>servers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>updates</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mup.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.commands">module mup.commands</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.commands.commands">
+            function <span class="apidocSignatureSpan">mup.</span>commands
+            <span class="apidocSignatureSpan">(parser)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.custom_errors">module mup.custom_errors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.custom_errors.HiddenError">
+            function <span class="apidocSignatureSpan">mup.custom_errors.</span>HiddenError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.meteor">module mup.meteor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.meteor.default">
+            function <span class="apidocSignatureSpan">mup.meteor.</span>default
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.mongo">module mup.mongo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.mongo.default">
+            function <span class="apidocSignatureSpan">mup.mongo.</span>default
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.mup_api">module mup.mup_api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.mup_api.default">
+            function <span class="apidocSignatureSpan">mup.mup_api.</span>default
+            <span class="apidocSignatureSpan">(base, args, configPath, settingsPath, verbose)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.servers">module mup.servers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.servers.default">
+            function <span class="apidocSignatureSpan">mup.servers.</span>default
+            <span class="apidocSignatureSpan">(servers)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.updates">module mup.updates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.updates.default">
+            function <span class="apidocSignatureSpan">mup.updates.</span>default
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mup.utils">module mup.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.utils.countOccurences">
+            function <span class="apidocSignatureSpan">mup.utils.</span>countOccurences
+            <span class="apidocSignatureSpan">(needle, haystack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.utils.getDockerLogs">
+            function <span class="apidocSignatureSpan">mup.utils.</span>getDockerLogs
+            <span class="apidocSignatureSpan">(name, sessions, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.utils.resolvePath">
+            function <span class="apidocSignatureSpan">mup.utils.</span>resolvePath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.utils.runSSHCommand">
+            function <span class="apidocSignatureSpan">mup.utils.</span>runSSHCommand
+            <span class="apidocSignatureSpan">(info, command)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mup.utils.runTaskList">
+            function <span class="apidocSignatureSpan">mup.utils.</span>runTaskList
+            <span class="apidocSignatureSpan">(list, sessions, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup" id="apidoc.module.mup">module mup</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.commands" id="apidoc.module.mup.commands">module mup.commands</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.commands.commands" id="apidoc.element.mup.commands.commands">
+        function <span class="apidocSignatureSpan">mup.</span>commands
+        <span class="apidocSignatureSpan">(parser)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function commands(parser) {
+  return parser.command(&#x27;init&#x27;, &#x27;Setup files for new mup project&#x27;, {}, commandFunctions.init).command(&#x27;deploy&#x27;, &#x27;Deploy app to servers
+&#x27;, function (yargs) {
+    return yargs.option(&#x27;cached-build&#x27;, {
+      description: &#x27;Use build from previous deploy&#x27;,
+      boolean: true
+    });
+  }, commandFunctions.deploy).command(&#x27;logs&#x27;, &#x22;Show app&#x27;s logs. Supports options from docker logs&#x22;, function (yargs) {
+    return yargs.strict(false).option(&#x27;tail&#x27;, {
+      description: &#x27;Number of lines to show from the end of the logs&#x27;,
+      number: true,
+      default: &#x27;all&#x27;
+    }).option(&#x27;follow&#x27;, {
+      description: &#x27;Follow log output&#x27;,
+      alias: &#x27;f&#x27;,
+      boolean: true
+    });
+  }, commandFunctions.logs).command(&#x27;reconfig&#x27;, &#x27;Updates server env and start script to match config&#x27;, {}, commandFunctions.reconfig
+).command(&#x27;restart&#x27;, &#x27;Restart apps&#x27;, {}, commandFunctions.restart).command(&#x27;setup&#x27;, &#x27;Install depedencies on server, setups custom
+ certificates and mongodb to match config&#x27;, {}, commandFunctions.setup).command(&#x27;start&#x27;, &#x27;Start app&#x27;, {}, commandFunctions.start
+).command(&#x27;stop&#x27;, &#x27;Stop app&#x27;, {}, commandFunctions.stop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.custom_errors" id="apidoc.module.mup.custom_errors">module mup.custom_errors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.custom_errors.HiddenError" id="apidoc.element.mup.custom_errors.HiddenError">
+        function <span class="apidocSignatureSpan">mup.custom_errors.</span>HiddenError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HiddenError() {
+  _classCallCheck(this, HiddenError);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.meteor" id="apidoc.module.mup.meteor">module mup.meteor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.meteor.default" id="apidoc.element.mup.meteor.default">
+        function <span class="apidocSignatureSpan">mup.meteor.</span>default
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (config) {
+  var details = [];
+  details = (0, _utils.combineErrorDetails)(details, _joi2.default.validate(config.meteor, schema, _utils.VALIDATE_OPTIONS));
+  if (config.meteor.name.indexOf(&#x27; &#x27;) &#x3e; -1) {
+    details.push({
+      message: &#x27;&#x22;name&#x22; has a space&#x27;
+    });
+  }
+  details = (0, _utils.combineErrorDetails)(details, (0, _utils.serversExist)(config.servers, config.meteor.servers));
+
+  return (0, _utils.addLocation)(details, &#x27;meteor&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Promise(function (resolve) {
+var params = {
+  timeout: 1000,
+  package: _package2.default.name,
+  auth: {}
+};
+
+var npm = new _silentNpmRegistryClient2.<span class="apidocCodeKeywordSpan">default</span>();
+var uri = &#x27;https://registry.npmjs.org/npm&#x27;;
+npm.distTags.fetch(uri, params, function (err, res) {
+  if (err) {
+    resolve();
+    return;
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.mongo" id="apidoc.module.mup.mongo">module mup.mongo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.mongo.default" id="apidoc.element.mup.mongo.default">
+        function <span class="apidocSignatureSpan">mup.mongo.</span>default
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (config) {
+  var details = [];
+  var validationErrors = _joi2.default.validate(config.mongo, schema, _utils.VALIDATE_OPTIONS);
+  details = (0, _utils.combineErrorDetails)(details, validationErrors);
+  details = (0, _utils.combineErrorDetails)(details, (0, _utils.serversExist)(config.servers, config.mongo.servers));
+  return (0, _utils.addLocation)(details, &#x27;mongo&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Promise(function (resolve) {
+var params = {
+  timeout: 1000,
+  package: _package2.default.name,
+  auth: {}
+};
+
+var npm = new _silentNpmRegistryClient2.<span class="apidocCodeKeywordSpan">default</span>();
+var uri = &#x27;https://registry.npmjs.org/npm&#x27;;
+npm.distTags.fetch(uri, params, function (err, res) {
+  if (err) {
+    resolve();
+    return;
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.mup_api" id="apidoc.module.mup.mup_api">module mup.mup_api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.mup_api.default" id="apidoc.element.mup.mup_api.default">
+        function <span class="apidocSignatureSpan">mup.mup_api.</span>default
+        <span class="apidocSignatureSpan">(base, args, configPath, settingsPath, verbose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MupAPI(base, args, configPath, settingsPath, verbose) {
+  _classCallCheck(this, MupAPI);
+
+  this.base = base;
+  this.args = args;
+  this.config = null;
+  this.settings = null;
+  this.sessions = null;
+  this.configPath = configPath;
+  this.settingsPath = settingsPath;
+  this.verbose = verbose;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Promise(function (resolve) {
+var params = {
+  timeout: 1000,
+  package: _package2.default.name,
+  auth: {}
+};
+
+var npm = new _silentNpmRegistryClient2.<span class="apidocCodeKeywordSpan">default</span>();
+var uri = &#x27;https://registry.npmjs.org/npm&#x27;;
+npm.distTags.fetch(uri, params, function (err, res) {
+  if (err) {
+    resolve();
+    return;
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.servers" id="apidoc.module.mup.servers">module mup.servers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.servers.default" id="apidoc.element.mup.servers.default">
+        function <span class="apidocSignatureSpan">mup.servers.</span>default
+        <span class="apidocSignatureSpan">(servers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateServers(servers) {
+  var details = [];
+  var result = _joi2.default.validate(servers, schema, _utils.VALIDATE_OPTIONS);
+  details = (0, _utils.combineErrorDetails)(details, result);
+  return (0, _utils.addLocation)(details, &#x27;servers&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Promise(function (resolve) {
+var params = {
+  timeout: 1000,
+  package: _package2.default.name,
+  auth: {}
+};
+
+var npm = new _silentNpmRegistryClient2.<span class="apidocCodeKeywordSpan">default</span>();
+var uri = &#x27;https://registry.npmjs.org/npm&#x27;;
+npm.distTags.fetch(uri, params, function (err, res) {
+  if (err) {
+    resolve();
+    return;
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.updates" id="apidoc.module.mup.updates">module mup.updates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.updates.default" id="apidoc.element.mup.updates.default">
+        function <span class="apidocSignatureSpan">mup.updates.</span>default
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function () {
+  return new Promise(function (resolve) {
+    var params = {
+      timeout: 1000,
+      package: _package2.default.name,
+      auth: {}
+    };
+
+    var npm = new _silentNpmRegistryClient2.default();
+    var uri = &#x27;https://registry.npmjs.org/npm&#x27;;
+    npm.distTags.fetch(uri, params, function (err, res) {
+      if (err) {
+        resolve();
+        return;
+      }
+
+      var npmVersion = res.latest;
+      var local = _package2.default.version.split(&#x27;.&#x27;).map(function (n) {
+        return Number(n);
+      });
+      var remote = npmVersion.split(&#x27;.&#x27;).map(function (n) {
+        return Number(n);
+      });
+
+      var available = remote[0] &#x3e; local[0] || remote[0] === local[0] &#x26;&#x26; remote[1] &#x3e; local[1] || remote[1] === local[1] &#x26;&#x26; remote
+[2] &#x3e; local[2];
+
+      if (available) {
+        var text = &#x27;update available &#x27; + _package2.default.version + &#x27; =&#x3e; &#x27; + npmVersion;
+        text += &#x27;\nTo update, run &#x27; + _chalk2.default.green(&#x27;npm i -g mup&#x27;);
+        console.log((0, _boxen2.default)(text, {
+          padding: 1,
+          margin: 1,
+          align: &#x27;center&#x27;,
+          borderColor: &#x27;yellow&#x27;
+        }));
+      }
+
+      resolve();
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return new Promise(function (resolve) {
+var params = {
+  timeout: 1000,
+  package: _package2.default.name,
+  auth: {}
+};
+
+var npm = new _silentNpmRegistryClient2.<span class="apidocCodeKeywordSpan">default</span>();
+var uri = &#x27;https://registry.npmjs.org/npm&#x27;;
+npm.distTags.fetch(uri, params, function (err, res) {
+  if (err) {
+    resolve();
+    return;
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mup.utils" id="apidoc.module.mup.utils">module mup.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mup.utils.countOccurences" id="apidoc.element.mup.utils.countOccurences">
+        function <span class="apidocSignatureSpan">mup.utils.</span>countOccurences
+        <span class="apidocSignatureSpan">(needle, haystack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function countOccurences(needle, haystack) {
+  var regex = new RegExp(needle, &#x27;g&#x27;);
+  var match = haystack.match(regex) || [];
+  return match.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mup.utils.getDockerLogs" id="apidoc.element.mup.utils.getDockerLogs">
+        function <span class="apidocSignatureSpan">mup.utils.</span>getDockerLogs
+        <span class="apidocSignatureSpan">(name, sessions, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDockerLogs(name, sessions, args) {
+  var command = &#x27;sudo docker &#x27; + args.join(&#x27; &#x27;) + &#x27; &#x27; + name + &#x27; 2&#x3e;&#x26;1&#x27;;
+
+  log(&#x27;getDockerLogs command: &#x27; + command);
+
+  var promises = _.map(sessions, function (session) {
+    var input = new Callback2Stream();
+    var host = &#x27;[&#x27; + session._host + &#x27;]&#x27;;
+    var lineSeperator = _readline2.default.createInterface({
+      input: input,
+      terminal: true
+    });
+    lineSeperator.on(&#x27;line&#x27;, function (data) {
+      console.log(host + data);
+    });
+    var options = {
+      onStdout: function onStdout(data) {
+        input.addData(data);
+      },
+      onStderr: function onStderr(data) {
+        // the logs all come in on stdout so stderr isn&#x27;t added to lineSeperator
+        process.stdout.write(host + data);
+      }
+    };
+    return (0, _bluebird.promisify)(session.execute.bind(session))(command, options);
+  });
+  return Promise.all(promises);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mup.utils.resolvePath" id="apidoc.element.mup.utils.resolvePath">
+        function <span class="apidocSignatureSpan">mup.utils.</span>resolvePath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolvePath() {
+  for (var _len = arguments.length, paths = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    paths[_key] = arguments[_key];
+  }
+
+  var expandedPaths = paths.map(function (_path) {
+    return (0, _expandTilde2.default)(_path);
+  });
+  return _path3.default.resolve.apply(_path3.default, _toConsumableArray(expandedPaths));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mup.utils.runSSHCommand" id="apidoc.element.mup.utils.runSSHCommand">
+        function <span class="apidocSignatureSpan">mup.utils.</span>runSSHCommand
+        <span class="apidocSignatureSpan">(info, command)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runSSHCommand(info, command) {
+  return new Promise(function (resolve, reject) {
+    var conn = new _ssh.Client();
+
+    // TODO better if we can extract SSH agent info from original session
+    var sshAgent = process.env.SSH_AUTH_SOCK;
+    var ssh = {
+      host: info.host,
+      port: info.opts &#x26;&#x26; info.opts.port || 22,
+      username: info.username
+    };
+
+    if (info.pem) {
+      ssh.privateKey = _fs2.default.readFileSync(resolvePath(info.pem), &#x27;utf8&#x27;);
+    } else if (info.password) {
+      ssh.password = info.password;
+    } else if (sshAgent &#x26;&#x26; _fs2.default.existsSync(sshAgent)) {
+      ssh.agent = sshAgent;
+    }
+    conn.connect(ssh);
+
+    conn.once(&#x27;error&#x27;, function (err) {
+      if (err) {
+        reject(err);
+      }
+    });
+
+    // TODO handle error events
+    conn.once(&#x27;ready&#x27;, function () {
+      conn.exec(command, function (err, outputStream) {
+        if (err) {
+          conn.end();
+          reject(err);
+          return;
+        }
+
+        var output = &#x27;&#x27;;
+
+        outputStream.on(&#x27;data&#x27;, function (data) {
+          output += data;
+        });
+
+        outputStream.once(&#x27;close&#x27;, function (code) {
+          conn.end();
+          resolve({ code: code, output: output });
+        });
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mup.utils.runTaskList" id="apidoc.element.mup.utils.runTaskList">
+        function <span class="apidocSignatureSpan">mup.utils.</span>runTaskList
+        <span class="apidocSignatureSpan">(list, sessions, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runTaskList(list, sessions, opts) {
+  if (opts &#x26;&#x26; opts.verbose) {
+    addStdioHandlers(list);
+    delete opts.verbose;
+  }
+  return new Promise(function (resolve, reject) {
+    list.run(sessions, opts, function (summaryMap) {
+      for (var host in summaryMap) {
+        if (summaryMap.hasOwnProperty(host)) {
+          var summary = summaryMap[host];
+          if (summary.error) {
+            var error = summary.error;
+            error.nodemiralHistory = summary.history;
+            reject(error);
+
+            return;
+          }
+        }
+      }
+
+      resolve();
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
